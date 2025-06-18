@@ -13,7 +13,7 @@ html {
     position: fixed;
     width: 100%;
     height: 9vh;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgb(255, 255, 255);
 
     display: flex;
     align-items: center;
@@ -22,7 +22,9 @@ html {
 
     z-index: 100;
 }
-
+ .name:hover {
+    cursor: pointer;
+ }
 
 .hamburger {
     display: none;
@@ -56,10 +58,15 @@ a {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
+    padding: 5px;
 }
 
 .navopt:hover {
-    color: #3182ce;
+    color: rgb(7, 7, 7);
+    /* background-color: #82c1ff5d; */
+    /* background-image: linear-gradient(to bottom right,#eff6ff,#eef2ff,#f5f3ff); */
+    background: linear-gradient(135deg, #8d9fee3d 0%, #b777f838 100%);
+    border-radius: 1rem;
 
 }
 
@@ -202,7 +209,7 @@ a {
 
 .about-Section {
     width: 100%;
-    height: fit-content;
+    height: max-content;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -213,10 +220,13 @@ a {
 
 .box {
     width: 90%;
-    height: fit-content;
+    height: max-content;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* padding-bottom: 0%; */
+    margin-bottom: 0%;
 }
 
 .about-title {
@@ -247,8 +257,23 @@ a {
     justify-content: center;
 }
 
+.laptop {
+    padding-top: 20px;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.img-about {
+    width: 80%;
+    height: 80%;
+    align-items: end;
+}
+
 .sub-title {
+    width: 100%;
     font-size: 2.3rem;
+    text-align: start;
+    padding-left: 10px;
 }
 
 .a-info {
@@ -286,10 +311,11 @@ a {
 
 .achivement {
     width: 100%;
-    height: 18rem;
+    height: max-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 4vh;
 }
 
 .ach-info {
@@ -372,7 +398,8 @@ a {
 .service-box {
     width: 30%;
     height: max-content;
-    min-height: 463px;
+    min-height: 500px;
+    /* min-height: auto; */
     background: white;
     margin: 2rem 0px;
     border-radius: 1.5rem;
@@ -439,6 +466,7 @@ a {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
+    height: max-content;
 }
 
 .contact-title {
@@ -500,6 +528,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    height: 100%;
 }
 
 form h3 {
@@ -629,12 +658,112 @@ button {
 
 
 @media screen and (min-width: 1200px) {
+
+    .stats {
+        width: 100%;
+        /* background-color: #1e293b; */
+    }
+
+    .mini-stats {
+        min-width: 200px;
+    }
+
+    .navBar {
+        /* background: #000; */
+    }
+
+    .title {
+        font-size: 3.2rem;
+    }
+
     .services-flex {
         width: 75%;
     }
+
+    .welcome {
+        width: 50vh;
+    }
+
+    .achivement {
+        /* margin-top: 20vh; */
+        padding-top: 1vh;
+    }
+
+    .welcome {
+        width: max-content;
+    }
+
+    .contact {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .mini-stats {
+        padding: 10px 10px;
+    }
+
+    .ach-info {
+        min-height: 271px;
+        padding: 10px 10px;
+        justify-content: start;
+    }
+
+    /* .form-box {
+        height: 50%;
+    }
+
+    input {
+        height: 20%;
+    } */
+
+    .two-grid-colm {
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    /* .temp-b {
+        justify-content: start;
+    } */
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.5px) {
+
+    .ach-info {
+        min-height: 271px;
+        padding: 10px 10px;
+        justify-content: start;
+    }
+
+
+    .sub-title {
+        font-size: 2rem;
+    }
+
+    .navBar {
+        /* background: #000; */
+    }
+
+    .stats {
+        padding: 10px 15px;
+    }
+
+    .stats-num {
+        font-size: 2rem;
+    }
+
+    .mini-stats {
+        padding: 10px 15px;
+    }
+
+    .stats-info {
+        font-size: 1rem;
+    }
+
+    .stats-num {}
+
+    .navBar {
+        /* background: #000; */
+    }
     .title {
         font-size: 3.5rem;
         line-height: 55px;
@@ -647,17 +776,36 @@ button {
 
     .service-box {
         width: 45%;
+        min-height: 445px;
+        /* background: #000; */
     }
 
     .two-grid-colm {
         height: auto;
         gap: 2rem;
     }
+
+    .welcome {
+        width: auto;
+        height: max-content;
+    }
+    .laptop {
+        align-items: end;
+    }
+    /* .navBar {
+        background: #000;
+    } */
 }
 
 @media screen and (max-width: 991px) {
+
+    .ach-info {
+        min-height: 220px;
+    }
+
     .navBar {
         padding: 20px 30px;
+        /* background: #000; */
     }
 
     .nav-links {
@@ -681,15 +829,35 @@ button {
         font-size: 1.2rem;
     }
 
+    .a-description {
+        font-size: 25px;
+    }
+
+    .a-info {
+        /* font-size: 1.5rem; */
+        width: 90%;
+        text-align: start;
+    }
+
+    .ach-info {
+        padding: 10px 0px;
+    }
+
     .two-grid-colm {
         grid-template-columns: 1fr;
         height: auto;
     }
 
+    .div-end {
+        width: 100%;
+    }
+
     .temp-b {
         align-items: center;
         text-align: center;
+        padding-bottom: 0px;
     }
+
 
     .achivement {
         flex-direction: column;
@@ -717,9 +885,37 @@ button {
         width: 100%;
         margin-bottom: 2rem;
     }
+
+    .laptop {
+        padding-bottom: 0px;
+    }
+
+    .sub-title {
+        font-size: 2rem;
+    }
+    .checklist {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
+
+    .sub-title {
+        padding: 5px;
+        color: #000000c9;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+
+    .welcome {
+        width: 50%;
+        max-width: 300px;
+    }
+
     .hamburger {
         display: block;
         position: relative;
@@ -776,8 +972,9 @@ button {
     }
 
     .a-info {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #626365;
+        width: 100%;
     }
 
     .hero-Section {
@@ -814,7 +1011,15 @@ button {
     .stats {
         flex-direction: column;
         height: auto;
+        /* max-width: 300px; */
+        width: 100%;
         gap: 1rem;
+    }
+
+    .mini-stats {
+        max-width: 280px;
+        margin: auto 50px;
+        /* width: 100%; */
     }
 
     .img-about {
@@ -840,6 +1045,7 @@ button {
         width: 90%;
         font-size: 1.2rem;
         color: #626365;
+        margin-bottom: 35px;
     }
 
     .ach-info {
@@ -884,6 +1090,10 @@ button {
     .social-icons {
         justify-content: center;
     }
+
+    .service-box {
+        min-height: 360px;
+    }
 }
 
 
@@ -907,4 +1117,8 @@ button {
         transition: transform 0.3s ease;
     }
 
+}
+
+.shadow-moving {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
